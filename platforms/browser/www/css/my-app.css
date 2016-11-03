@@ -1,0 +1,149 @@
+.profileButton {
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+    margin: 5px auto;
+    font-size: 16px;
+}
+
+.logo {
+    height: 50px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.panelLabels {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.panelInputs {
+    font-size: 16px;
+    line-height: 25px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#logOutButton {
+    display: none;
+}
+
+#loginOutputLabel {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#updateProfileButton {
+    display: inline;
+    font-size: 16px;
+    
+}
+
+#outputLabel1 {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#outputLabel2 {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#surveyNumberLabel {
+    text-align: center;
+}
+
+#surveyNumberInput {
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black
+}
+
+#resultSection {
+    display: inline;
+}
+
+.borderInputs {
+    border: 1px solid black;
+}
+
+#disputeReasonTextArea {
+    height: 100px;
+}
+
+#disputeButtons {
+    margin-top: -30px;
+}
+
+.messageWindow {
+    width: 80%;
+    height: 50%;
+    border: 1px solid black;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    background-color: lightgray;
+    display: none;
+    
+}
+
+#offerReasonLabel {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#offerActionLabel {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#offerOfferLabel {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+#okButton {
+    width: 100px;
+    border-radius: 25px;
+    border: 1p solid black;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 30%;
+}
+
+#okButton2 {
+    display: none;
+    width: 100px;
+    border-radius: 25px;
+    border: 1p solid black;
+    font-size: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 30%;
+}
+
+#bankSurveyNumberInput {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.background-bank {
+    background-color: white;
+}
+
+.background-util {
+    background-color: darkblue;
+}
+
+.hidden {
+    display: none;
+}

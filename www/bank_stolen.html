@@ -1,0 +1,102 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="index.html" class="link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Report Stolen / Lost Card</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="stolen" class="page background-bank">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+             <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Your name" id="stolenNameInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail" id="stolenEmailInput" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder="Phone" id="stolenPhoneInput" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Date</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="MM/DD/YYYY" id="stolenDateInput" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Stolen/Lost</div>
+                        <div class="item-input">
+                          <select  id="stolenTypeInput">
+                            <option>stolen</option>
+                            <option>lost</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Send Replacement</div>
+                        <div class="item-input">
+                          <label class="label-switch">
+                            <input type="checkbox" id="stolenReplacementInput" />
+                            <div class="checkbox"></div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-50">
+                    <a class="button button-big color-red button-fill" id="stolenCancelButton" onclick="stolenCancel()">Cancel</a>
+                </div>
+                <div class="col-50">
+                    <a class="button button-big color-green button-fill" id="stolenApplyButton" onclick="stolenCardEvent()">Apply</a>
+                </div>
+              </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

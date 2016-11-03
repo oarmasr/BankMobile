@@ -1,0 +1,113 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="index.html" class="link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Dispute Charge</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="dispute" class="page background-bank">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+             <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Your name" id="disputeNameInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail" id="disputeEmailInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder="Phone" id="disputePhoneInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Charges</div>
+                        <div class="item-input">
+                          <select id="disputeChargeSelect" onchange="disputeSelectChange()">
+                            <option value="0">-Select One-</option>
+                            <option value="1">Diner 25.04 08/13/16</option>
+                            <option value="2">Gas Station 14.54 08/12/16</option>
+                            <option value="3">Online 65.32 08/14/16</option>
+                            <option value="4">Fast Food 32.03 08/14/16</option>
+                            <option value="5">Store 250.42 08/13/16</option>  
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Date</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="MM/DD/YYYY" id="disputeDateInput" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Vendor</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Vendor Name" id="disputeVendorInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Amount</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Charge Amount" id="disputeAmountInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-50">
+                    <a class="button button-big color-red button-fill" onclick="disputeCancelled()">Cancel</a>
+                </div>
+                <div class="col-50">
+                    <a class="button button-big color-green button-fill" onclick="chargeDisputeEvent()">Apply</a>
+                </div>
+             </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

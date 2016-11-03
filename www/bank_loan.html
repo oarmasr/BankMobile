@@ -1,0 +1,96 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="index.html" class="link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Loan Application</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="loan" class="page background-bank">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+             <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Name</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Your name" id="loanNameInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">E-mail</div>
+                        <div class="item-input">
+                          <input type="email" placeholder="E-mail" id="loanEmailInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Phone</div>
+                        <div class="item-input">
+                          <input type="tel" placeholder="Phone" id="loanPhoneInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Date</div>
+                        <div class="item-input">
+                          <input type="date" placeholder="MM/DD/YYYY" id="loanDateInput" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Income</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Annual Income" id="loanIncomeInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Amount</div>
+                        <div class="item-input">
+                          <input type="text" placeholder="Loan Amount" id="loanAmountInput"/>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="row">
+                <div class="col-50">
+                    <a class="button button-big color-red button-fill" id="loanCancelButton" onclick="bankCancelLoanApp()">Cancel</a>
+                </div>
+                <div class="col-50">
+                    <a class="button button-big color-green button-fill" id="loanApplyButton" onclick="bankSubmitLoanApp()">Apply</a>
+                </div>
+              </div>    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

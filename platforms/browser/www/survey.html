@@ -1,0 +1,43 @@
+
+<!-- We don't need full layout here, because this page will be parsed with Ajax-->
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Survey</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- Page, data-page contains page name-->
+  <div data-page="about" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+          <div class="panelLabels" id="surveyNumberLabel">Mobile Number</div>
+          <div>
+            <input type="text"  class="panelInputs" id="surveyNumberInput" />
+          </div><br />    
+          <div class="col-50">
+                <input type="submit" value="Schedule Survey" class="button button-big button-fill color-red" onclick="scheduleSurvey()" />
+          </div><br />
+          <div id=resultSection>           
+            <div class="col-50">
+                <input type="submit" value="Get Survey Results" class="button button-big button-fill color-red" onclick="surveyCompleteEvent()" />
+            </div><br /><br />
+            <div class="panelLabels" id="surveyIDLabel">Survey ID:</div><br />
+            <div class="panelLabels" id="answerOneLabel">Response One:</div><br />
+            <div class="panelLabels" id="answerTwoLabel">Response Two:</div><br />
+            <div class="panelLabels" id="answerThreeLabel">Response Three:</div><br />  
+            <div class="panelLabels" id="answerFourLabel">Response Four:</div>
+          </div>
+          </div>
+          <div class="panelLabels" id="outputLabel1" ></div>    
+          <div class="panelLabels" id="outputLabel2" ></div>     
+        </div>
+      </div>
+    </div>
+</div>

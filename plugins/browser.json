@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.navigatordemo.bank"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.navigatordemo.bank"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.navigatordemo.bank"
+        }
+    },
+    "dependent_plugins": {}
+}

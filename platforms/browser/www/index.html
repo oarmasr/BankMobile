@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Navigator Mobile Bank Demo</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p class="panelLabels">User Information</p>
+          <div class="panelLabels">Account Number</div>
+          <div>
+            <input type="text"  class="panelInputs" id="accountNumber" />
+          </div><br />
+          <div class="col-25">
+            <input type="submit" value="Load Profile" class="profileButton" onclick="getProfile()" id="loginButton" />
+          </div>
+          <div class="panelLabels" id="loginOutputLabel" ></div>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Profile Information</p>
+            <div class="panelLabels">First Name</div>
+            <div class="item-input">
+                <input type="text" placeholder="First Name" class="panelInputs" id="firstNameInput" />
+            </div>
+            <div class="panelLabels">Last Name</div>
+            <div class="item-input">
+                <input type="text" placeholder="Last Name" class="panelInputs" id="lastNameInput" />
+            </div>
+            <div class="panelLabels">Email Address</div>
+            <div class="item-input">
+                <input id="loginEmailInput" type="email" placeholder="E-mail" class="panelInputs"/>
+            </div>
+            <div class="panelLabels">Mobile Number</div>
+            <div class="item-input">
+                <input type="text" placeholder="Phone Number" class="panelInputs" id="phoneNumberInput"/>
+            </div>
+            <div class="panelLabels">Twitter Handle</div>
+            <div class="item-input">
+                <input type="text" placeholder="Twitter Handle" class="panelInputs" id="twitterHandleInput"/>
+            </div>
+            <div class="panelLabels">Account Number</div>
+            <div class="item-input">
+                <input type="text" placeholder="Account Number" class="panelInputs" id="accountNumberInput"/>
+            </div>
+            <div id="hiddenPanel" class="hidden">
+                <div class="panelLabels">Navigator Server</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="navServer" value="104.130.72.155"/>
+                </div>
+                <div class="panelLabels">Timeline URL</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="timelineURL"/>
+                </div>
+                <div class="panelLabels">Google Sheet URL</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="sheetURL" />
+                </div>
+                <div class="panelLabels">Last Survey ID</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="surveyIDLatest" />
+                </div>
+                <div class="panelLabels">IVR Content A</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="ivrContentA" />
+                </div>
+                <div class="panelLabels">IVR Content B</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="ivrContentB" />
+                </div>
+                <div class="panelLabels">IVR Content c</div>
+                <div class="item-input">
+                    <input type="text" class="panelInputs" id="ivrContentC" />
+                </div>
+            </div>    
+            <br /> 
+            <div class="col-25 hidden">
+                <input type="submit" value="Update Information" class="profileButton" id="updateProfileButton" />
+            </div>          
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding">Navigator Mobile Bank Demo</div>
+            <div class="right">
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through ">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">    
+              <div class="content-block-title">Welcome To Navigator Mobile Bank Demo</div>
+              <div class="content-block">
+                <div class="content-block-inner">
+                  <img src="img/NavigatorPlayground-01.png" class="logo" />
+                  <p></p>
+                </div>
+              </div>
+              <div class="content-block-title"></div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="bank_loan.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Loan Application</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="bank_dispute.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Charge Dispute</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="bank_stolen.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Stolen/Lost Card</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="bank_survey.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Take Survey</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="bank_IVR.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Bank Visual IVR</div>
+                        </div>
+                      </div></a></li>  
+                </ul>
+              </div>
+              <div class="content-block-title"></div>
+              <div class="content-block">
+                <div class="row">
+                  <div class="col-50"><a href="#" data-panel="left" class="button open-panel" id="frontLoginLink">Load Profile</a></div>
+                  <div class="col-50"><a href="#" data-panel="right" class="button open-panel">Profile Information</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link"></a><a href="http://www.virtualhold.com/" class="link" target="_blank">Virtual Hold</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  </body>
+</html>
